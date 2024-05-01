@@ -12,7 +12,7 @@ export const Navbar = () => {
                 <p>SHOPPER</p>
 
             </div>
-            <ul>
+            <ul className='nav-menu'>
                 <li>shop</li>
                 <li>shop</li>
                 <li>shop</li>
