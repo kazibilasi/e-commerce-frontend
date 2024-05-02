@@ -1,4 +1,5 @@
 
+import { Outlet } from 'react-router-dom'
 import { Navbar } from './Components/Navbar/Navbar'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
      <Navbar></Navbar>
+     <Outlet></Outlet>
     </>
   )
 }

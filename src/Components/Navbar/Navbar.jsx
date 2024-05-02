@@ -15,13 +15,13 @@ export const Navbar = () => {
 
             </div>
             <ul className='nav-menu'>
-                <li onClick={() => { setMenu('shop') }}><Link style={{textDecoration : 'none'}} to='/'>Shop</Link>{menu === "shop" ? <hr></hr>:<></>}</li>
-                <li onClick={() => { setMenu('mens') }}><Link style={{textDecoration : 'none'}}  to='/mens'>Men</Link> {menu === "mens" ? <hr></hr>:<></>}</li>
-                <li onClick={() => { setMenu('womens') }}>Women {menu === "womens" ? <hr></hr>:<></>}</li>
-                <li onClick={() => { setMenu('kids') }}>Kids {menu === "kids" ? <hr></hr>:<></>}</li>
+                <Link style={{ textDecoration: 'none' }} to='/'><li onClick={() => { setMenu('shop') }}>Shop{menu === "shop" ? <hr></hr> : <></>}</li></Link>
+                <li onClick={() => { setMenu('mens') }}><Link style={{ textDecoration: 'none' }} to='/mens'>Men</Link> {menu === "mens" ? <hr></hr> : <></>}</li>
+                <li onClick={() => { setMenu('womens') }}><Link style={{ textDecoration: 'none' }} to='/womens'>Women</Link> {menu === "womens" ? <hr></hr> : <></>}</li>
+                <li onClick={() => { setMenu('kids') }}> <Link style={{ textDecoration: 'none' }} to='/kids'>Kids</Link> {menu === "kids" ? <hr></hr> : <></>}</li>
             </ul>
             <div className='nav-login-cart'>
-                <button>Login</button>
+                <Link to='/login'><button>Login</button></Link>
                 <img src={cart_icon}></img>
                 <div className='nav-cart-count'>
                     0
