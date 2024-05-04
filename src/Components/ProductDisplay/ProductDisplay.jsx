@@ -34,10 +34,10 @@ export const ProductDisplay = (props) => {
                     <div className='productDisplay-right-price-old'>${product.old_price}</div>
                     <div className='productDisplay-right-price-new'>${product.new_price}</div>
             </div>
-            <div className='productDisplay-right-description'></div>
+            <div className='productDisplay-right-description'>A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment</div>
             <div className='productDisplay-right-size'>
                 <h1>Select Size</h1>
-                <div className='productDisplay-right-size'>
+                <div className='productDisplay-right-sizes'>
                     <div>S</div>
                     <div>M</div>
                     <div>L</div>
