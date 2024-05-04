@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -12,45 +13,53 @@ import { ShopCategory } from './Pages/ShopCategory';
 import { Product } from './Pages/Product';
 import { Cart } from './Pages/Cart';
 import { LoginSignup } from './Pages/LoginSignup';
+import ShopContextProvider from './Context/ShopContext';
+
+import men_banner from './Components/Assets/banner_mens.png'
+import women_banner from './Components/Assets/banner_women.png'
+import kid_banner from './Components/Assets/banner_kids.png'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<App></App> ,
-    children:[
+    element: <App></App>,
+    children: [
       {
         path: "/",
-        element:<Shop></Shop>,
+        element: <Shop></Shop>,
       },
       {
         path: "/mens",
-        element:<ShopCategory></ShopCategory>,
-        
+        element: <ShopCategory banner={men_banner} category='men'></ShopCategory>,
+      
+
       },
       {
         path: "/womens",
-        element:<ShopCategory></ShopCategory>,
+        element: <ShopCategory banner={women_banner} category='women' ></ShopCategory>,
         
+
       },
       {
         path: "/kids",
-        element:<ShopCategory></ShopCategory>,
+        element: <ShopCategory banner={kid_banner} category='kid' ></ShopCategory>,
         
+
       },
       {
         path: "/product/:id",
-        element:<Product></Product>,
-        
+        element: <Product></Product>,
+
       },
       {
         path: "/cart",
-        element:<Cart></Cart>,
-        
+        element: <Cart></Cart>,
+
       },
       {
         path: "/login",
-        element:<LoginSignup></LoginSignup>,
-        
+        element: <LoginSignup></LoginSignup>,
+
       },
     ]
   },
@@ -58,6 +67,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ShopContextProvider>
+      <RouterProvider router={router} />
+    </ShopContextProvider>
   </React.StrictMode>,
 )
