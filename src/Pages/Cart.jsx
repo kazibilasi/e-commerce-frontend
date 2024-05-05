@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartItems } from '../Components/CartItems/CartItems'
+
 
 export const Cart = () => {
+  
   return (
-    <div>Cart</div>
+    <div><CartItems></CartItems></div>
   )
 }
